@@ -11,6 +11,6 @@ Student Info
 =======================
 
 * Name: Nguyễn Việt Dũng
-* ID: USTHBI8-0303
+* ID: USTHBI8-030
 * Group ID: 4
 
