@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".WeatherActivity"
     android:orientation="vertical"
-    android:background="@drawable/ic_launcher_background">
+    android:background="@drawable/gradient">
 
     <LinearLayout
         android:id="@+id/day1"
