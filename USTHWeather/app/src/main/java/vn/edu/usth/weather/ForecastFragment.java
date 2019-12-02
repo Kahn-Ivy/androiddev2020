@@ -25,7 +25,7 @@ public class ForecastFragment extends Fragment {
 
         ViewGroup v = (ViewGroup) inflater.inflate(R.layout.fragment_forecast,null,false);
         Random rd = new Random();
-        LinearLayout linearLayout = v.findViewById(R.id.fragmentForcast);
+        LinearLayout linearLayout = v.findViewById(R.id.forecast_fragment);
         for(int i=0; i<9; ++i){
             View row = inflater.inflate(R.layout.weather_row,container,false);
             ((TextView)row.findViewById(R.id.day)).setText(days[i%7]);

@@ -10,6 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class WeatherActivity extends AppCompatActivity {
 
     private final static String TAG = "TestActivity";
@@ -23,6 +25,8 @@ public class WeatherActivity extends AppCompatActivity {
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
         pager.setOffscreenPageLimit(3);
         pager.setAdapter(adapter);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+        tabLayout.setupWithViewPager(pager);
         Log.i(TAG, "On Create .....");
     }
     /* (non-Javadoc)
