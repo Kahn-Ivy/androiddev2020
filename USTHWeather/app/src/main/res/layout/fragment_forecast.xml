@@ -9,4 +9,3 @@
     android:orientation="vertical"
     android:background="@drawable/gradient">
 </LinearLayout>
-

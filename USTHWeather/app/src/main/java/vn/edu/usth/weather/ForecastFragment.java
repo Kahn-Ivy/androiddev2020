@@ -26,7 +26,7 @@ public class ForecastFragment extends Fragment {
         for(int i=0; i<9; ++i){
             View row = inflater.inflate(R.layout.weather_row,container,false);
             ((TextView)row.findViewById(R.id.day)).setText(days[i%7]);
-            ((ImageView)row.findViewById(R.id.weather)).setImageResource(R.drawable.cloudy);
+            ((ImageView)row.findViewById(R.id.weather)).setImageResource(R.drawable.rain);
             linearLayout.addView(row);
         }
         return v;

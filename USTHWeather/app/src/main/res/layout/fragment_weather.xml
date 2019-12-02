@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmentWeather"
+    android:background="@color/colorBackgound"
+    tools:context=".WeatherFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="135dp"
+        android:layout_height="141dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/weatherImage"
+        android:layout_toRightOf="@+id/weatherImage"
+        android:gravity="center"
+        android:text="Paris" />
+
+    <ImageView
+        android:id="@+id/weatherImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:contentDescription="Just picture" />
+
+    <TextView
+        android:layout_width="137dp"
+        android:layout_height="141dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="-1dp"
+        android:layout_toStartOf="@+id/weatherImage"
+        android:layout_toLeftOf="@+id/weatherImage"
+        android:gravity="center"
+        android:text="Monday" />
+</RelativeLayout>
