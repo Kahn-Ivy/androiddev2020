@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import vn.edu.usth.weatheractivity.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,5 +23,4 @@ public class WeatherAndForcastFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_weather_and_forcast, container, false);
     }
-
 }

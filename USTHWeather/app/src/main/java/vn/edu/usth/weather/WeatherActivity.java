@@ -1,4 +1,4 @@
-package vn.edu.usth.weather;
+package vn.edu.usth.weatheractivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,16 +7,28 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
-import android.widget.TableLayout;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import vn.edu.usth.weather.HomeFragmentPagerAdapter;
+
 public class WeatherActivity extends AppCompatActivity {
-
+    MediaPlayer mp;
     private final static String TAG = "TestActivity";
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,54 +40,69 @@ public class WeatherActivity extends AppCompatActivity {
         pager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(pager);
+        //writeExternal();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.marimba);
+                mp.start();
+            }
+        }).start();
+
         Log.i(TAG, "On Create .....");
     }
-    /* (non-Javadoc)
-     * @see android.app.Activity#onDestroy()
-     */
+    private void writeExternal() {
+        String filename = "marimba.mp3";
+        String filepath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/";
+
+        try {
+            InputStream is = getApplicationContext().getResources().openRawResource(R.raw.marimba);
+            File myFile = new File(filepath + filename);
+            if(!myFile.exists()){
+                try{
+                    myFile.createNewFile();
+                }
+                catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+            OutputStream fout = new FileOutputStream(myFile);
+            fout.write(is.read());
+            fout.close();
+            is.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "On Destroy .....");
     }
-    /* (non-Javadoc)
-     * @see android.app.Activity#onPause()
-     */
     @Override
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "On Pause .....");
     }
-
-    /* (non-Javadoc)
-     * @see android.app.Activity#onRestart()
-     */
     @Override
     protected void onRestart() {
         super.onRestart();
         Log.i(TAG, "On Restart .....");
     }
-
-    /* (non-Javadoc)
-     * @see android.app.Activity#onResume()
-     */
     @Override
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "On Resume .....");
     }
-
-    /* (non-Javadoc)
-     * @see android.app.Activity#onStart()
-     */
     @Override
     protected void onStart() {
         super.onStart();
         Log.i(TAG, "On Start .....");
     }
-    /* (non-Javadoc)
-     * @see android.app.Activity#onStop()
-     */
     @Override
     protected void onStop() {
         super.onStop();

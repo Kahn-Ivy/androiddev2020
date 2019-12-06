@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import vn.edu.usth.weatheractivity.R;
+
 public class WeatherFragment extends Fragment {
     @Nullable
     @Override

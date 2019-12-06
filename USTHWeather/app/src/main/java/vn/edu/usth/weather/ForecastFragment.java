@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import vn.edu.usth.weatheractivity.R;
+
 public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
