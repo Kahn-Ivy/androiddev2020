@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragmentWeather"
-    android:background="@color/colorBackgound"
+    android:padding="10dp"
+    android:background="@drawable/frame"
     tools:context=".WeatherFragment">
 
     <TextView
@@ -12,9 +13,11 @@
         android:layout_width="135dp"
         android:layout_height="141dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="21dp"
         android:layout_toEndOf="@+id/weatherImage"
         android:layout_toRightOf="@+id/weatherImage"
         android:gravity="center"
@@ -26,7 +29,7 @@
         android:layout_height="140dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="84dp"
         android:contentDescription="Just picture" />
 
     <TextView
@@ -34,10 +37,10 @@
         android:layout_height="141dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="-1dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:layout_toStartOf="@+id/weatherImage"
         android:layout_toLeftOf="@+id/weatherImage"
         android:gravity="center"
